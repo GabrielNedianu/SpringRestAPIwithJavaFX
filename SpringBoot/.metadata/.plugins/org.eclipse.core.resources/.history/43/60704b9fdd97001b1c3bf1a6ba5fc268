@@ -1,0 +1,23 @@
+package demo.controller;
+
+@Controller
+public class SampleController {
+
+    @RequestMapping("home")
+    public String loadHomePage(Model m) {
+        m.addAttribute("name", "CodeTutr");
+        return "home";
+    }
+
+    @RequestMapping(value="/test", method=RequestMethod.GET)
+    public String handlePost(@RequestParam String action, Model m) {
+        if( action.equals("save") ){
+            //handle save
+         }
+         else if( action.equals("renew") ){
+            //handle renew
+         }
+        m.addAttribute("name", "change");
+        return "home";
+    }
+}

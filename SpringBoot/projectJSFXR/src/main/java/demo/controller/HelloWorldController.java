@@ -7,14 +7,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloWorldController {
   
-  @RequestMapping("/")
-  String home() {
-    return "Hello World!";
-  }
+  //@RequestMapping("/")
+  //String home() {
+   // return "Hello World!";
+  //}
   
   @RequestMapping("/hello")
   String home1() {
     return "Hello World111!";
+  }
+  
+  @RequestMapping("/helloPerson")
+  String homeName() {
+    return "Hello";
   }
     
     @PostMapping("/api/post")
@@ -23,3 +28,5 @@ public class HelloWorldController {
         return sum;
     }
   }
+
+
