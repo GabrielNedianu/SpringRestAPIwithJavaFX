@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import movies.JsonExtractor;
+import movies.SearchingMovie;
 @RestController
 public class HelloWorldController {
   
@@ -15,7 +18,10 @@ public class HelloWorldController {
   
   @RequestMapping("/hello")
   String home1() {
-    return "Hello World111!";
+	String page = SearchingMovie.findMovie("Lord", true);
+	String display = "";
+	display = display + JsonExtractor.getTitle(page) +     /*+ JsonExtractor.getPlot(page) + */   JsonExtractor.getImgSRC(page);	
+    return display;
   }
   
   @RequestMapping("/helloPerson")
