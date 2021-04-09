@@ -37,7 +37,7 @@ public class JsonExtractor {
                 }
                 StringBuilder sb = new StringBuilder(title);
                 sb.deleteCharAt(title.length()-2);
-                //sb.deleteCharAt(title.length()-3);
+                sb.deleteCharAt(title.length()-3);
                 sb.deleteCharAt(0);
                 sb.deleteCharAt(0);
                 title = sb.toString();
@@ -68,6 +68,27 @@ public class JsonExtractor {
                 sb.deleteCharAt(0);
                 Plot = sb.toString();
                 return Plot;
+            }
+        }
+		return "eruare";
+	}
+	
+public static String getIBDCode(String Json) {
+		
+		String[] characters = Json.split(" ");
+		for(int iterator=0;iterator<characters.length;iterator++)
+        {
+            //System.out.println(characters[iterator]);
+            if(characters[iterator].equals("\"imdbID\":")==true)
+            {
+                String src = characters[iterator+1];
+                StringBuilder sb = new StringBuilder(src);
+                sb.deleteCharAt(src.length()-2);
+                sb.deleteCharAt(src.length()-3);
+                sb.deleteCharAt(src.length()-3);
+                sb.deleteCharAt(0);
+                src = sb.toString();
+                return src;
             }
         }
 		return "eruare";

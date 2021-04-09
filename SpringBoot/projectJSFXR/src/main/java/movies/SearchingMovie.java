@@ -16,7 +16,9 @@ public class SearchingMovie
 	
 	public static void main(String args[]) {
 		//System.out.println(findMovie("tt0120737",false));
-		System.out.println(findMovie("Lord",true));
+		String rezultat = findMovie("Lord", true);
+		System.out.println(rezultat);
+		System.out.println(JsonExtractor.getIBDCode(rezultat));
 	}
 	
 	//Returning a prettyJson about what we were searching

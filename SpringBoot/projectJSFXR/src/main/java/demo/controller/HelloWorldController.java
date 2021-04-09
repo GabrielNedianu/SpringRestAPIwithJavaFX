@@ -20,7 +20,7 @@ public class HelloWorldController {
   String home1() {
 	String page = SearchingMovie.findMovie("Lord", true);
 	String display = "";
-	display = display + JsonExtractor.getTitle(page) +     /*+ JsonExtractor.getPlot(page) + */   JsonExtractor.getImgSRC(page);	
+	//display = display + JsonExtractor.getTitle(page) +     /*+ JsonExtractor.getPlot(page) + */   JsonExtractor.getImgSRC(page);	
     return display;
   }
   

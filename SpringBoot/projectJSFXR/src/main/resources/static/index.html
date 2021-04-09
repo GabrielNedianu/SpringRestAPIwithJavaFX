@@ -1,18 +1,41 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>You first Spring application</title>
+        <title>Movie Searcher Online</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     </head>
     <body>
-        <p><a href="/hello">Greet the world!</a></p>
+        <p><a href="/hello">Search for my Movie!</a></p>
 
-        <form action="/helloPerson" method="GET" id="nameForm">
-            <div>
-                <label for="nameField">How should the app call you?</label>
-                <input name="myName" id="nameField">
-                <button>Greet me!</button>
-            </div>
+        <form id="frm1">
+            
+                <label for="nameField">Ce film doresti sa cauti bossulica?</label>
+                <input type="text" name="fname" >
+                <button>Don't touch me!</button>
+            
         </form>
+
+<button onclick="myFunction()">Du-ma la film</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("frm1");
+  var text = "";
+  var i;
+  var url ="Movie/search=";
+  for (i = 0; i < x.length -1 ;i++) {
+    text += x.elements[i].value ;
+  }
+
+  url += text;
+  document.getElementById("demo").innerHTML = url;
+  window.location.href = url;
+}
+</script>
+
+
+
     </body>
 </html>
