@@ -1,0 +1,75 @@
+package movies;
+
+public class JsonExtractor {
+
+	
+	public static String getImgSRC(String Json) {
+		
+		String[] characters = Json.split(" ");
+		for(int iterator=0;iterator<characters.length;iterator++)
+        {
+            //System.out.println(characters[iterator]);
+            if(characters[iterator].equals("\"Poster\":")==true)
+            {
+                String src = characters[iterator+1];
+                StringBuilder sb = new StringBuilder(src);
+                sb.deleteCharAt(src.length()-2);
+                src = sb.toString();
+                return src;
+            }
+        }
+		return "eruare";
+	}
+	
+	public static String getTitle(String Json) {
+		
+		String[] characters = Json.split(" ");
+		for(int iterator=0;iterator<characters.length;iterator++)
+        {
+           // System.out.println(characters[iterator]);
+            if(characters[iterator].equals("\"Title\":")==true)
+            {
+                String title="";
+                while(characters[iterator+1].equals("\"Actors\":") == false)
+                {
+                	title = title + " " + characters[iterator+1];
+                    iterator++;
+                }
+                StringBuilder sb = new StringBuilder(title);
+                sb.deleteCharAt(title.length()-3);
+                sb.deleteCharAt(title.length()-4);
+                sb.deleteCharAt(0);
+                sb.deleteCharAt(0);
+                title = sb.toString();
+                return title;
+            }
+        }
+		return "eruare";
+	}
+	
+	public static String getPlot(String Json) {
+		
+		String[] characters = Json.split(" ");
+		for(int iterator=0;iterator<characters.length;iterator++)
+        {
+            //System.out.println(characters[iterator]);
+            if(characters[iterator].equals("\"Plot\":")==true)
+            {
+                String aux="";
+                while(characters[iterator+1].equals("\"Director\":") == false)
+                {
+                    aux = aux + " " + characters[iterator+1];
+                    iterator++;
+                }
+                StringBuilder sb = new StringBuilder(aux);
+                sb.deleteCharAt(aux.length()-3);
+                sb.deleteCharAt(aux.length()-4);
+                sb.deleteCharAt(0);
+                sb.deleteCharAt(0);
+                aux = sb.toString();
+                return aux;
+            }
+            
+            return "eruare";
+	}
+}

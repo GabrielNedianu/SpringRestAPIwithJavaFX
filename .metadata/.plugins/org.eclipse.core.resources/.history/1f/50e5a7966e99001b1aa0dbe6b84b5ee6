@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Movie Searcher Online</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <p><a href="/hello">Search for my Movie!</a></p>
+
+        <form action="/Movie/search=" "nameField">
+            <div>
+                <label for="nameField">Ce film doresti sa cauti bossulica?</label>
+                <input name="s" id="nameField">
+                <button>Apasa-ma!</button>
+            </div>
+        </form>
+    </body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="frm1" action="/action_page.php">
+  Film: <input type="text" name="fname" ><br>
+  <input type="submit" value="Submit">
+</form> 
+
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("frm1");
+  var text = "";
+  var i;
+  var url ="www.";
+  var endurl =".com";
+  for (i = 0; i < x.length -1 ;i++) {
+    text += x.elements[i].value ;
+  }
+
+  url += text;
+  url += endurl;
+  document.getElementById("demo").innerHTML = url;
+  window.location.href = url;
+}
+</script>
+
+</body>
+</html>

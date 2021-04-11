@@ -1,0 +1,115 @@
+package randomMovieGenerator;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Generator {
+	
+	static final ArrayList<String> filmeArrayList = new ArrayList<String>(Arrays.asList("Back to the Future",
+
+"Desperado",
+"Night at the Museum",
+"Robocop",
+"Ghostbusters",
+"Cool World"
+,"Donnie Darko"
+,"Double Indemnity"
+,"The Spanish Prisoner"
+,"The Smurfs"
+,"Dead Alive"
+,"Army of Darkness"
+,"Peter Pan"
+,"The Jungle Story"
+,"Red Planet"
+,"Deep Impact"
+,"The Long Kiss Goodnight"
+,"Juno"
+,"(500) Days of Summer"
+,"The Dark Knight"
+,"Bringing Down the House"
+,"Se7en"
+,"Chocolat"
+,"The American"
+,"The American President"
+,"Hudsucker Proxy"
+,"Conan the Barbarian"
+,"Shrek"
+,"The Fox and the Hound"
+,"Lock, Stock, and Two Barrels"
+,"Date Night"
+,"200 Cigarettes"
+,"9 1/2 Weeks"
+,"Iron Man 2"
+,"Tombstone"
+,"Young Guns"
+,"Fight Club"
+,"The Cell"
+,"The Unborn"
+,"Black Christmas"
+,"The Change-Up"
+,"The Last of the Mohicans"
+,"Shutter Island"
+,"Ronin"
+,"Ocean’s 11"
+,"Philadelphia"
+,"Chariots of Fire"
+,"M*A*S*H"
+,"Walking and Talking"
+,"Walking Tall"
+,"The 40 Year Old Virgin"
+,"Superman III"
+,"The Hour"
+,"The Slums of Beverly Hills"
+,"Secretary"
+,"Secretariat"
+,"Pretty Woman"
+,"Sleepless in Seattle"
+,"The Iron Mask"
+,"Smoke"
+,"Schindler’s List"
+,"The Beverly Hillbillies"
+,"The Ugly Truth"
+,"Bounty Hunter"
+,"Say Anything"
+,"8 Seconds"
+,"Metropolis"
+,"Indiana Jones and the Temple of Doom"
+,"Kramer vs. Kramer"
+,"The Manchurian Candidate"
+,"aging Bull"
+,"Heat"
+,"About Schmidt"
+,"Re-Animator"
+,"Evolution"
+,"Gone in 60 Seconds"
+,"Wanted"
+,"The Man with One Red Shoe"
+,"The Jerk"
+,"Whip It"
+,"Spanking the Monkey"
+,"Steel Magnolias"
+,"Horton Hears a Who"
+,"Honey"
+,"Brazil"
+,"Gorillas in the Mist"
+,"Before Sunset"
+,"After Dark"
+,"From Dusk til Dawn"
+,"Cloudy with a Chance of Meatballs"
+,"arvey"
+,"r. Smith Goes to Washington"
+,".A. Confidential"
+,"Little Miss Sunshine"
+,"The Future"
+,"oward the Duck"
+,"oward’s End"
+,"he Innkeeper"
+,"evolutionary Road"));
+
+	public static String movie() {
+		
+		
+		
+		return null;
+	}
+}

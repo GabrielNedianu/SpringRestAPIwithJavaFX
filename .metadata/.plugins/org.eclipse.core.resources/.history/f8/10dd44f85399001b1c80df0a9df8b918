@@ -1,0 +1,14 @@
+package movies;
+
+public class MovieSearch {
+
+	public static String[] search(String cautare) {
+		
+		String[] rezultat = new String[3];
+		
+		
+		
+		return rezultat;
+	}
+	
+}

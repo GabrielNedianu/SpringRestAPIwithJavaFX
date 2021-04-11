@@ -1,0 +1,28 @@
+package movies;
+
+public class MovieSearch {
+
+	public static void main(String args[]) {
+		String[] rez = search("Lord");
+		//System.out.println(rez[2]);
+	}
+	
+	//Function that extracts for our search in this order: Name, Plot, IMG_SRC
+	public static String[] search(String cautare) {
+		
+		String[] rezultat = new String[3];
+		
+		String cautareJSON="";
+		cautareJSON = SearchingMovie.findMovie(cautare, true);
+		System.out.println(cautareJSON);
+		String imbdID = JsonExtractor.getIBDCode(cautareJSON);
+		
+		cautareJSON = SearchingMovie.findMovie(imbdID, false);
+		rezultat[0] = JsonExtractor.getTitle(cautareJSON);
+		rezultat[1] = JsonExtractor.getPlot(cautareJSON);
+		rezultat[2] = JsonExtractor.getImgSRC(cautareJSON);
+		
+		return rezultat;
+	}
+	
+}

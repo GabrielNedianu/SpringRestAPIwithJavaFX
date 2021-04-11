@@ -1,0 +1,36 @@
+package demo.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import templates.SearchingMovie;
+@RestController
+public class HelloWorldController {
+  
+  //@RequestMapping("/")
+  //String home() {
+   // return "Hello World!";
+  //}
+  
+  @RequestMapping("/hello")
+  String home1() {
+    return SearchingMovie.main(null);
+  }
+  
+  @RequestMapping("/helloPerson")
+  String homeName() {
+    return "Hello";
+  }
+    
+  @PostMapping("/api/post")
+  public Integer setNumbers(@RequestParam(name = "a") Integer a, @RequestParam(name = "b") Integer b ) {
+      Integer sum = a + b;
+      return sum;
+  }  
+    
+  }
+
+

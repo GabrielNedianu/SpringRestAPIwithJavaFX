@@ -1,0 +1,5 @@
+package movies;
+
+public class JsonExtractor {
+
+}

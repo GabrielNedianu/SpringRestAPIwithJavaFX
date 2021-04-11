@@ -1,0 +1,37 @@
+package demo.controller;
+
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import movies.MovieSearch;
+import randomMovieGenerator.*;
+
+@Controller
+public class MovieReturnerController {
+	
+	    @GetMapping(value = "/RandomMovie", produces = MediaType.TEXT_HTML_VALUE)
+	    @ResponseBody
+	    public String movieRandAsHTML() {
+	    	//value= value + " ";
+	    	String numeFilmString = Generator.movie();
+	    	String[] cautare = MovieSearch.search(numeFilmString);
+	    	
+	        return "<html>\n" + "<header><title>Your Movie Search</title></header>\n" +
+	          "<body>\n" + cautare[0]+"<br>\n" + cautare[1] + "<br>\n"+"<br>\n" + cautare[2] + "<br>\n"+ "</body>\n" + "</html>";
+	    }
+	    
+	    @GetMapping(value = "/RandmMovie", produces = MediaType.TEXT_HTML_VALUE)
+	    @ResponseBody
+	    public String movieAsHTML() {
+	    	//value= value + " ";
+	    	
+	    	
+	        return "<html>\n" + "<header><title>Your Movie Search</title></header>\n" +
+	          "<body>\n" + "Mancamiati filmu\nFilm"+"<br>\n" + "geawgkweag" + "<br>\n"+ "</body>\n" + "</html>";
+	    }
+	
+	
+	
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Movie Searcher Online</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <p><a href="/hello">Search for my Movie!</a></p>
+
+        <form action="/Movie/search=" "nameForm">
+            <div>
+                <label for="nameField">Ce film doresti sa cauti bossulica?</label>
+                <input name="s" id="nameField">
+                <button>Apasa-ma!</button>
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+package demo.controller;
+
+import java.io.File;
+
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class MovieReturnerController {
+	
+	    @GetMapping(value = "/movie", produces = MediaType.TEXT_HTML_VALUE)
+	    @ResponseBody
+	    public String movieAsHTML() {
+	    	File htmlCode = new File("/projectJSFXR/src/main/resources/templates/result.html");
+	    	return File;
+	        //return "<html>\n" + "<header><title>Your Movie Search</title></header>\n" +
+	          //"<body>\n" + "Mancamiati filmu\nFilm" + "</body>\n" + "</html>";
+	    }
+	
+	
+	
+}
