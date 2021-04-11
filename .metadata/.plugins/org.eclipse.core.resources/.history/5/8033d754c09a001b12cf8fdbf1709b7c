@@ -94,22 +94,14 @@ public class Main extends Application {
 		
 		String[] Info = JsuopReturner.getInformation(movieS);
         
-        Text numeFilm = new Text(Info[0]);
-        numeFilm.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
-		
-        Image image = new Image(Info[1]);
+        String imageSource = Info[1];
+         
+        Image image = new Image(imageSource);
         ImageView imageView = new ImageView(image);
         imageView.setPreserveRatio(true);
         
-        Text numePlot = new Text(Info[2]);
-        numePlot.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
-		
-        BorderPane border = new BorderPane();
-        border.setTop(numeFilm);
-        border.setLeft(imageView);
-        border.setBottom(numePlot);
-        
-        Scene scene = new Scene(border, 600, 600); 
+        Group root = new Group(imageView);
+        Scene scene = new Scene(root, 800, 800); 
         //stage.setTitle("Loading an image");
         
 		return scene;	

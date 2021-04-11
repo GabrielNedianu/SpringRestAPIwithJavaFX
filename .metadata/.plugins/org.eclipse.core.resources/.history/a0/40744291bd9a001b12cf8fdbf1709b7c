@@ -36,7 +36,10 @@ public class HelloWorldController {
       return sum;
   }
   
-
+  @GetMapping("/search")
+    public String[] setStrings(@RequestParam(name = "s")) {
+	  
+  }
   }
 
 

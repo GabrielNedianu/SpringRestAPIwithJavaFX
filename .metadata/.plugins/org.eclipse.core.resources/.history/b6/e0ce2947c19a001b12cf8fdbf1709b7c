@@ -104,12 +104,9 @@ public class Main extends Application {
         Text numePlot = new Text(Info[2]);
         numePlot.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
 		
-        BorderPane border = new BorderPane();
-        border.setTop(numeFilm);
-        border.setLeft(imageView);
-        border.setBottom(numePlot);
+        BorderPane root = new BorderPane(numeFilm,null,imageView,null,numePlot);
         
-        Scene scene = new Scene(border, 600, 600); 
+        Scene scene = new Scene(root, 600, 600); 
         //stage.setTitle("Loading an image");
         
 		return scene;	

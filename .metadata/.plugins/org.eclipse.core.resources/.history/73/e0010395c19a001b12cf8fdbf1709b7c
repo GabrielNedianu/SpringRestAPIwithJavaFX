@@ -106,8 +106,6 @@ public class Main extends Application {
 		
         BorderPane border = new BorderPane();
         border.setTop(numeFilm);
-        border.setLeft(imageView);
-        border.setBottom(numePlot);
         
         Scene scene = new Scene(border, 600, 600); 
         //stage.setTitle("Loading an image");
