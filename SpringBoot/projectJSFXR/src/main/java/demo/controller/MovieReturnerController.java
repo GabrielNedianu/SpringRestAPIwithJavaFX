@@ -80,7 +80,7 @@ public class MovieReturnerController {
             "<meta name=\"description\" content=\"Movies, games and their description\">\n"+
 
 
-            "<title>Counter-Strike:Global Offensive</title>\n"+
+            "<title>Cauti si tu un film aici</title>\n"+
             "<style>\n"+
                 "h1 {\n"+
                     "text-align: center;\n"+

@@ -1,5 +1,6 @@
 package demo.controller;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,8 +34,12 @@ public class HelloWorldController {
   public Integer setNumbers(@RequestParam(name = "a") Integer a, @RequestParam(name = "b") Integer b ) {
       Integer sum = a + b;
       return sum;
-  }  
-    
+  }
+  
+  @GetMapping("/search")
+    public String[] setStrings(@RequestParam(name = "s")) {
+	  
+  }
   }
 
 

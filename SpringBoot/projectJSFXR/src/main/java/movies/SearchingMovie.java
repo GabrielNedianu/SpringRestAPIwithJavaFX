@@ -27,7 +27,7 @@ public class SearchingMovie
 		String host = "http://www.omdbapi.com/";
 		String charset = "UTF-8";
 		String x_rapidapi_host = "www.omdbapi.com";
-	    String x_rapidapi_key = "bc1d12f1";//Type here your key
+	    String x_rapidapi_key = "bc1d12f1";
 	    // Params
 	    
 	    String querryType = null;
