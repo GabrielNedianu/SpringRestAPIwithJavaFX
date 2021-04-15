@@ -40,8 +40,8 @@ public class Main extends Application {
 			scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
 			grid.add(scenetitle, 0, 0, 2, 1);
 
-			Label userName = new Label("Introdu filmul :");
-			grid.add(userName, 0, 1);
+			Label searchMovie = new Label("Introdu filmul :");
+			grid.add(searchMovie, 0, 1);
 
 			TextField userTextField = new TextField();
 			grid.add(userTextField, 1, 1);
@@ -54,20 +54,21 @@ public class Main extends Application {
 			
 			final Text actiontarget = new Text();
 	        grid.add(actiontarget, 1, 6);
-	        
-	        btn.setOnAction(new EventHandler<ActionEvent>() {
+	        	
+			Scene scene = new Scene(grid, 300, 275);
+			
+			btn.setOnAction(new EventHandler<ActionEvent>() {
 	        	 
 	            @Override
 	            public void handle(ActionEvent e) {
 	            	String FilmIntrodus = userTextField.getText();
 	                //MovieScene(FilmIntrodus);
 	            	primaryStage.setTitle("Poftim Filmul");
-	                primaryStage.setScene(MovieScene(FilmIntrodus));
+	            	//Aici cream a doua scena a aplicatiei(unde avem filmul cautat si un buton de intoarcere)
+	                primaryStage.setScene(MovieScene(FilmIntrodus,scene,primaryStage));
 	                primaryStage.show();
 	            }
 	        });
-	
-			Scene scene = new Scene(grid, 300, 275);
 			
 			primaryStage.setScene(scene);
 			primaryStage.show();
@@ -90,7 +91,8 @@ public class Main extends Application {
 		return null;
 	}
 	
-	public static Scene MovieScene(String movieS) {
+	//Cream aici scena secundara care afiseaza informatiile despre Film si avem un buton care ne poate intoarce la scena initiala
+	public static Scene MovieScene(String movieS, Scene scenaInitiala, Stage prStage) {
 		
 		String[] Info = JsuopReturner.getInformation(movieS);
         
@@ -104,12 +106,22 @@ public class Main extends Application {
         Text numePlot = new Text(Info[2]);
         numePlot.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
 		
+        Button btn = new Button("Cauta iar!");
+        btn.setOnAction(new EventHandler<ActionEvent>() {
+       	 
+            @Override
+            public void handle(ActionEvent e) {
+            	prStage.setScene(scenaInitiala);
+            }
+        });
+        
         BorderPane border = new BorderPane();
         border.setTop(numeFilm);
         border.setLeft(imageView);
         border.setBottom(numePlot);
+        border.setRight(btn);
         
-        Scene scene = new Scene(border, 600, 600); 
+        Scene scene = new Scene(border, 1920, 1080); 
         //stage.setTitle("Loading an image");
         
 		return scene;	

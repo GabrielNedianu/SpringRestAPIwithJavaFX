@@ -65,11 +65,6 @@ public class MovieReturnerController {
 	    public String movieAsHTML(@PathVariable String search) {
 	    	
 	    	String filmDeCautatString = search;
-	    	//StringBuilder sBuilder = new StringBuilder(filmDeCautatString);
-	    	//sBuilder.delete(0, 2);
-	    	//filmDeCautatString = sBuilder.toString();
-	    	
-	    	//System.out.println(filmDeCautatString);
 	    	String[] cautare = MovieSearch.search(filmDeCautatString);
 	    	
 	        return "<html lang=\"en\">\n"+
