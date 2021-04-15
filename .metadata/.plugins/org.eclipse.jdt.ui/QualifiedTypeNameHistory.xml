@@ -15,7 +15,6 @@
     <fullyQualifiedTypeName name="movies.MovieSearch"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="org.thymeleaf.templateresolver.StringTemplateResolver"/>
-    <fullyQualifiedTypeName name="javafx.scene.Scene"/>
     <fullyQualifiedTypeName name="javafx.scene.layout.GridPane"/>
     <fullyQualifiedTypeName name="java.awt.Insets"/>
     <fullyQualifiedTypeName name="javafx.geometry.Pos"/>
@@ -41,4 +40,7 @@
     <fullyQualifiedTypeName name="javafx.scene.image.Image"/>
     <fullyQualifiedTypeName name="javafx.scene.Group"/>
     <fullyQualifiedTypeName name="javafx.scene.layout.BorderPane"/>
+    <fullyQualifiedTypeName name="com.sun.javafx.perf.PerformanceTracker.SceneAccessor"/>
+    <fullyQualifiedTypeName name="javafx.scene.Scene"/>
+    <fullyQualifiedTypeName name="javafx.stage.Stage"/>
 </qualifiedTypeNameHistroy>

@@ -18,7 +18,7 @@ public class JsonExtractor {
                 return src;
             }
         }
-		return "eruare";
+		return "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Error.svg/1200px-Error.svg.png";
 	}
 	
 	public static String getTitle(String Json) {
